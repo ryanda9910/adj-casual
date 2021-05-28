@@ -10,7 +10,7 @@ export default function Payment() {
   const [payment, setPayment] = useState("");
   const [grandTotal, setGrandTotal] = useState("");
   const router = useRouter();
-  const [paramData] = useState(JSON.parse(router.query.data));
+  const [paramData] = useState(JSON.parse(localStorage.getItem('paymentData')));
   const onPaymentMethod = (event) => {
     setPayment(event.target.value);
   };

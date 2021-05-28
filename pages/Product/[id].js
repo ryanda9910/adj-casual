@@ -32,9 +32,10 @@ export default function DetailProduct() {
       productquantityPrice: productquantityPrice,
       productSubTotal: productSubTotal,
     };
+    localStorage.setItem('dataDetailOrder', JSON.stringify(data))
     router.push({
       pathname: "/Checkout/[id]",
-      query: { id: router.query.id, data: JSON.stringify(data) }
+      query: { id: router.query.id }
     });
   };
 

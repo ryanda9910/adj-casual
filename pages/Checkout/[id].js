@@ -49,7 +49,7 @@ export default function Checkout() {
     setForm({ ...form, phonenumber: event.target.value });
   };
 
-  const [dataDetailOrder] = useState(JSON.parse(router.query.data));
+  const [dataDetailOrder] = useState(JSON.parse(localStorage.getItem('dataDetailOrder')));
   const selectedProvince = async (event) => {
     setLoading(true);
     const res = await fetch(`/api/city/${event.target.value}`);
@@ -98,9 +98,10 @@ export default function Checkout() {
       productQuantity:dataDetailOrder.productQuantity,
       productName:dataDetailOrder.productName
     }
+    localStorage.setItem('paymentData',JSON.stringify(paymentData))
     router.push({
       pathname: "/Payment/[id]",
-      query: { id: router.query.id, data: JSON.stringify(paymentData) }
+      query: { id: router.query.id,}
     });
   };
 
