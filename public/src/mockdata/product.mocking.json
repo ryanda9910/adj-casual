@@ -1,0 +1,29 @@
+[
+  {
+    "productImage": "../src/assets/tshirtsample.png",
+    "productName": "t-shirt",
+    "productPrice": 70000,
+    "productDiscount":30,
+    "productSize":["XL","L","M","S","XS"],
+    "productDesc":"Product productDescriptioVeniam commodo nulla Lorem nulla excepteur duis est qui. Tempor culpa ullamco aute magna elit excepteur eiusmod cillum proident qui. Deserunt ullamco ullamco occaecat exercitation commodo anim voluptate nulla excepteur Lorem magna. Exercitation eu mollit nulla adipisicing laboris qui nulla occaecat aliqua irure. Non est pariatur officia incididunt voluptate reprehenderit aliqua veniam do tempor. Occaecat duis commodo exercitation do ea ex minim. Fugiat ut dolore velit laboris ullamco non excepteur irure et ex incididunt commodo. Sit eu laborum cillum adipisicing velit nulla deserunt aliqua irure duis nostrud aliqua. Veniam consectetur minim ipsum labore minim culpa anim qui in adipisicing laboris quis. Proident consectetur elit do enim sit ipsum. Eu ad est sunt amet enim. Do anim enim non aliqua do eu esse mollit nostrud ad laboris. Officia aliquip proident duis quis labore do labore id esse tempor aute quis labore proident. Lorem velit fugiat culpa adipisicing ipsum ex non non. Reprehenderit velit minim deserunt culpa. Eiusmod eiusmod quis aute do deserunt labore. Elit aliqua cupidatat pariatur eiusmod do.n",
+    "productMaterial":"100% Cotton"
+  },
+  {
+    "productImage": "../src/assets/hoodiesample.png",
+    "productName": "hoodie",
+    "productPrice": 80000,
+    "productDiscount":30,
+    "productSize":["XL","L","M","S","XS"],
+    "productDesc":"Product productDescriptioVeniam commodo nulla Lorem nulla excepteur duis est qui. Tempor culpa ullamco aute magna elit excepteur eiusmod cillum proident qui. Deserunt ullamco ullamco occaecat exercitation commodo anim voluptate nulla excepteur Lorem magna. Exercitation eu mollit nulla adipisicing laboris qui nulla occaecat aliqua irure. Non est pariatur officia incididunt voluptate reprehenderit aliqua veniam do tempor. Occaecat duis commodo exercitation do ea ex minim. Fugiat ut dolore velit laboris ullamco non excepteur irure et ex incididunt commodo. Sit eu laborum cillum adipisicing velit nulla deserunt aliqua irure duis nostrud aliqua. Veniam consectetur minim ipsum labore minim culpa anim qui in adipisicing laboris quis. Proident consectetur elit do enim sit ipsum. Eu ad est sunt amet enim. Do anim enim non aliqua do eu esse mollit nostrud ad laboris. Officia aliquip proident duis quis labore do labore id esse tempor aute quis labore proident. Lorem velit fugiat culpa adipisicing ipsum ex non non. Reprehenderit velit minim deserunt culpa. Eiusmod eiusmod quis aute do deserunt labore. Elit aliqua cupidatat pariatur eiusmod do.n",
+    "productMaterial":"100% Cotton"
+  },
+  {
+    "productImage": "../src/assets/flannelsample.png",
+    "productName": "flannel",
+    "productPrice": 80000,
+    "productDiscount":30,
+    "productSize":["XL","L","M","S","XS"],
+    "productDesc":"Product DescriptioVeniam commodo nulla Lorem nulla excepteur duis est qui. Tempor culpa ullamco aute magna elit excepteur eiusmod cillum proident qui. Deserunt ullamco ullamco occaecat exercitation commodo anim voluptate nulla excepteur Lorem magna. Exercitation eu mollit nulla adipisicing laboris qui nulla occaecat aliqua irure. Non est pariatur officia incididunt voluptate reprehenderit aliqua veniam do tempor. Occaecat duis commodo exercitation do ea ex minim. Fugiat ut dolore velit laboris ullamco non excepteur irure et ex incididunt commodo. Sit eu laborum cillum adipisicing velit nulla deserunt aliqua irure duis nostrud aliqua. Veniam consectetur minim ipsum labore minim culpa anim qui in adipisicing laboris quis. Proident consectetur elit do enim sit ipsum. Eu ad est sunt amet enim. Do anim enim non aliqua do eu esse mollit nostrud ad laboris. Officia aliquip proident duis quis labore do labore id esse tempor aute quis labore proident. Lorem velit fugiat culpa adipisicing ipsum ex non non. Reprehenderit velit minim deserunt culpa. Eiusmod eiusmod quis aute do deserunt labore. Elit aliqua cupidatat pariatur eiusmod do.n",
+    "productMaterial":"100% Flannel"
+  }
+]

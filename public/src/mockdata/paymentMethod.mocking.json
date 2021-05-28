@@ -1,0 +1,17 @@
+[
+  {
+    "id": "TRF",
+    "name": "Bank Transfer",
+    "image":"../src/assets/banktransfer.png"
+  },
+  {
+    "id": "GPY",
+    "name": "Gopay",
+    "image":"../src/assets/gopay.png"
+  },
+  {
+    "id": "CRD",
+    "name": "Credit Card",
+    "image":"../src/assets/creditcard.png"
+  }
+]
