@@ -1,11 +1,17 @@
+/* purgecss start ignore */
 @tailwind base;
 
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+/* purgecss start ignore */
+html {
+  @apply antialiased;
+}
 
 .imgcenter{
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
-@tailwind components;
-@tailwind utilities;
