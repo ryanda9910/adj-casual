@@ -62,17 +62,17 @@ export default function Footer() {
             </Link>
           </li>
           <li>
-            <Link href='/Store'>
+            <Link href='/'>
               <a className='hover:text-primaryBlue'>Store</a>
             </Link>
           </li>
           <li>
-            <Link href='/About'>
+            <Link href='/'>
               <a className='hover:text-primaryBlue'>About</a>
             </Link>
           </li>
           <li>
-            <Link href='/Contact'>
+            <Link href='/'>
               <a className='hover:text-primaryBlue'>Contact</a>
             </Link>
           </li>

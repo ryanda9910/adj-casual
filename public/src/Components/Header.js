@@ -24,18 +24,18 @@ export default function Header() {
             <Link href='/'>
               <a className='p-2 lg:px-4 md:mx-2 text-black font-serif hover:text-primaryBlue'>Home</a>
             </Link>
-            <Link href='/Store'>
+            <Link href='/'>
               <a className='p-2 lg:px-4 md:mx-2 text-black font-serif hover:text-primaryBlue'>Store</a>
             </Link>
-            <Link href='/About'>
+            <Link href='/'>
               <a className='p-2 lg:px-4 md:mx-2 text-black font-serif hover:text-primaryBlue'>About</a>
             </Link>
-            <Link href='/Contact'>
+            <Link href='/'>
               <a className='p-2 lg:px-4 md:mx-2 text-black font-serif hover:text-primaryBlue'>
                 Contact
               </a>
             </Link>
-            <Link href='/Product'>
+            <Link href='/'>
               <a className='p-2 lg:px-4 md:mx-2 text-black font-serif'>
                 <img
                   src='../src/assets/search.png'
@@ -45,7 +45,7 @@ export default function Header() {
                 />
               </a>
             </Link>
-            <Link href='/Cart'>
+            <Link href='/'>
               <a className='p-2 lg:px-4 md:mx-2 text-black font-serif'>
                 <img
                   src='../src/assets/cart.png'
