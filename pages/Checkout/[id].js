@@ -48,8 +48,9 @@ export default function Checkout() {
   const onChangePhoneNumber = () => {
     setForm({ ...form, phonenumber: event.target.value });
   };
+  const DetailOrder = JSON.parse(localStorage.getItem('dataDetailOrder'))
 
-  const [dataDetailOrder] = useState(JSON.parse(localStorage.getItem('dataDetailOrder')));
+  const [dataDetailOrder] = useState(DetailOrder);
   const selectedProvince = async (event) => {
     setLoading(true);
     const res = await fetch(`/api/city/${event.target.value}`);
