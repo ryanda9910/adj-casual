@@ -19,7 +19,7 @@ export default function Home() {
         <div className='items-center justify-center m-10'>
           <img
             className="mx-auto"
-            src='../src/assets/bg-home.png'
+            src='../src/assets/home-open.png'
             alt='bg-home'
           />
         </div>
