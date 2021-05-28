@@ -10,11 +10,15 @@ export default function Payment() {
   const [payment, setPayment] = useState("");
   const [grandTotal, setGrandTotal] = useState("");
   const router = useRouter();
-  const PaymentData =  JSON.parse(localStorage.getItem('paymentData'))
-  const [paramData] = useState(PaymentData);
+  const [paramData, setParamData] = useState("");
   const onPaymentMethod = (event) => {
     setPayment(event.target.value);
   };
+
+  useEffect(() => {
+    const PaymentData = JSON.parse(localStorage.getItem("paymentData"));
+    setParamData(PaymentData);
+  }, []);
   const submitPayment = () => {
     let orderID = uuidv4();
 
@@ -32,10 +36,11 @@ export default function Payment() {
             .cost[0].etd,
           courier: paramData.shippingData.dataCost.rajaongkir.results[0].code,
           payment,
-          total:grandTotal,
-          shippingcost:paramData.shippingData.dataCost.rajaongkir.results[0].costs[0]
-          .cost[0].value,
-          productprice:paramData.productSubTotal,
+          total: grandTotal,
+          shippingcost:
+            paramData.shippingData.dataCost.rajaongkir.results[0].costs[0]
+              .cost[0].value,
+          productprice: paramData.productSubTotal,
         },
         { merge: true }
       )
@@ -79,8 +84,12 @@ export default function Payment() {
             </div>
             <div className='flex flex-row my-2 justify-between'>
               <h2 className='text-lg ml-10'>Shipping cost</h2>
-              <h2 className='text-lg mr-10'>{convertToRupiah(paramData.shippingData.dataCost.rajaongkir.results[0].costs[0]
-          .cost[0].value)}</h2>
+              <h2 className='text-lg mr-10'>
+                {convertToRupiah(
+                  paramData.shippingData.dataCost.rajaongkir.results[0].costs[0]
+                    .cost[0].value
+                )}
+              </h2>
             </div>
             <hr className='mx-8 border-borderColor' />
             <div className='flex flex-row my-2 justify-between mb-10'>

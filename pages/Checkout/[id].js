@@ -7,16 +7,16 @@ const fetcher = (url) => fetch(url).then((result) => result.json());
 export default function Checkout() {
   const [form, setForm] = useState({
     email: "",
-    name:"",
-    address:"",
-    phonenumber:""
+    name: "",
+    address: "",
+    phonenumber: "",
   });
   const [respone, setRespone] = useState([]);
   const [dataCity, setDataCity] = useState([]);
   const [city, setCity] = useState("");
   const [weight] = useState(1);
   const [courier, setCourier] = useState("");
-  const [loading ,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [loadingPost, setLoadingPost] = useState(false);
   const [dummyCourrier] = useState([
     {
@@ -48,9 +48,8 @@ export default function Checkout() {
   const onChangePhoneNumber = () => {
     setForm({ ...form, phonenumber: event.target.value });
   };
-  const DetailOrder = JSON.parse(localStorage.getItem('dataDetailOrder'))
 
-  const [dataDetailOrder] = useState(DetailOrder);
+  const [dataDetailOrder, setDetailOrder] = useState("");
   const selectedProvince = async (event) => {
     setLoading(true);
     const res = await fetch(`/api/city/${event.target.value}`);
@@ -66,6 +65,11 @@ export default function Checkout() {
   const onchangeCourrier = (event) => {
     setCourier(event.target.value);
   };
+
+  useEffect(() => {
+    const DetailOrder = JSON.parse(localStorage.getItem("dataDetailOrder"));
+    setDetailOrder(DetailOrder);
+  }, []);
 
   const postCost = async () => {
     let body = {
@@ -88,21 +92,21 @@ export default function Checkout() {
       body: newBody,
     });
     const dataCost = await res.json();
-    const paymentData={
-      shippingData:dataCost,
-      email:form.email,
-      name:form.name,
-      address:form.address,
-      phonenumber:form.phonenumber,
-      productImage:dataDetailOrder.productImage,
-      productSubTotal:dataDetailOrder.productSubTotal,
-      productQuantity:dataDetailOrder.productQuantity,
-      productName:dataDetailOrder.productName
-    }
-    localStorage.setItem('paymentData',JSON.stringify(paymentData))
+    const paymentData = {
+      shippingData: dataCost,
+      email: form.email,
+      name: form.name,
+      address: form.address,
+      phonenumber: form.phonenumber,
+      productImage: dataDetailOrder.productImage,
+      productSubTotal: dataDetailOrder.productSubTotal,
+      productQuantity: dataDetailOrder.productQuantity,
+      productName: dataDetailOrder.productName,
+    };
+    localStorage.setItem("paymentData", JSON.stringify(paymentData));
     router.push({
       pathname: "/Payment/[id]",
-      query: { id: router.query.id,}
+      query: { id: router.query.id },
     });
   };
 
@@ -225,11 +229,11 @@ export default function Checkout() {
             Continue Shipping
           </button>
           <button
-           disabled={
-            city === "" || weight === "" || weight === 0  || courier === "" 
-              ? true
-              : false
-          }
+            disabled={
+              city === "" || weight === "" || weight === 0 || courier === ""
+                ? true
+                : false
+            }
             onClick={postCost}
             className='bg-primaryBlue border border-primaryBlue text-white py-2 px-4 ml-5'
           >
