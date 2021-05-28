@@ -64,7 +64,7 @@ export default function Payment() {
   useEffect(() => {
     grandTotalPrice();
     getDataFromStorage();
-  }, []);
+  }, [paramData.productSubTotal]);
   return (
     <div>
       <Header />

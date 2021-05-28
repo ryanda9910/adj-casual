@@ -83,9 +83,9 @@ export default function ConfirmationId() {
               <h2 className='text-lg ml-10'>Shipping Cost</h2>
               <h2 className='text-lg mr-10'>
                 {convertToRupiah(
-                  data?.data?.total === null || data?.data?.total === undefined
+                  data?.data?.shippingcost === null || data?.data?.shippingcost === undefined
                     ? 0
-                    : data?.data?.total
+                    : data?.data?.shippingcost
                 )}
               </h2>
             </div>
