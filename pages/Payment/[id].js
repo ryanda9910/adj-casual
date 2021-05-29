@@ -16,11 +16,11 @@ export default function Payment() {
   };
 
   const submitPayment = () => {
-    try {
-      let orderID = uuidv4();
+    let orderID = uuidv4();
 
-      let getDoc = db.collection("order").doc();
-      getDoc.set(
+    let getDoc = db.collection("order").doc();
+    getDoc
+      .set(
         {
           orderId: orderID,
           name: paramData.name,
@@ -39,20 +39,22 @@ export default function Payment() {
           productprice: paramData.productSubTotal,
         },
         { merge: true }
-      );
-      router.push({
-        pathname: "/Confirmation/[id]",
-        query: { id: getDoc.id },
+      )
+      .then(() => {
+        router.push({
+          pathname: "/Confirmation/[id]",
+          query: { id: getDoc.id },
+        });
+      })
+      .catch((error) => {
+        alert("Gagal Submit Pembayaran");
       });
-    } catch (error) {
-      alert('Gagal Melakukan Pembayaran')
-    }
   };
 
   const grandTotalPrice = () => {
     setGrandTotal(
-      paramData.shippingData?.dataCost?.rajaongkir?.results[0].costs[0].cost[0]
-        .value + paramData.productSubTotal
+      paramData.shippingData?.dataCost?.rajaongkir?.results[0]
+      .costs[0].cost[0].value + paramData.productSubTotal
     );
   };
 
