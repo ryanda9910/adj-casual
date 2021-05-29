@@ -1,9 +1,17 @@
 import React,{useState} from "react";
 import Link from "next/link";
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const router = useRouter()
+  const onLogout=()=>{
+    localStorage.clear()
+    router.replace({
+      pathname:'/Login'
+    })
+  }
   const [navbarOpen,setNavbarOpen]=useState(false);
   return (
     <div className='header-2'>
@@ -55,6 +63,11 @@ export default function Header() {
                 />
               </a>
             </Link>
+            <button onClick={onLogout}>
+              <a className='p-2 lg:px-4 md:mx-2 text-black font-serif'>
+                <FontAwesomeIcon icon={faSignOutAlt} color="#000"/>
+              </a>
+            </button>
           </div>
         </div>
       </nav>
