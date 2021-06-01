@@ -17,7 +17,6 @@ export default function ConfirmationId() {
     `/api/confirmation/${router.query.id}`,
     fetcher
   );
-  console.log(data);
   return (
     <>
       <Header />

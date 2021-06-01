@@ -112,8 +112,6 @@ export default function Checkout() {
     getDataFromStorage();
   }, []);
 
-  console.log(dataDetailOrder);
-
   return (
     <>
       <Header />
