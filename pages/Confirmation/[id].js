@@ -45,7 +45,11 @@ export default function ConfirmationId() {
             <div className='flex flex-row m-10'>
               <div className='flex flex-row mr-10'>
                 <FontAwesomeIcon icon={faClock} color='silver' />
-                <h1 className='mx-4'>{data?.data?.days}</h1>
+                <h1 className='mx-4 uppercase'>
+                  {data?.data?.courier !== "pos"
+                    ? `${data?.data?.days} Hari`
+                    : `${data?.data?.days}`}
+                </h1>
               </div>
               <div className='flex flex-row mr-10'>
                 <FontAwesomeIcon icon={faTruck} color='silver' />
@@ -82,7 +86,8 @@ export default function ConfirmationId() {
               <h2 className='text-lg ml-10'>Shipping Cost</h2>
               <h2 className='text-lg mr-10'>
                 {convertToRupiah(
-                  data?.data?.shippingcost === null || data?.data?.shippingcost === undefined
+                  data?.data?.shippingcost === null ||
+                    data?.data?.shippingcost === undefined
                     ? 0
                     : data?.data?.shippingcost
                 )}
